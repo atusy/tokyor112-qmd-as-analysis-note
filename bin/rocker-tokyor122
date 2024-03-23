@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -eu
+
+SRC_DIR=$( cd "$( dirname "$0" )" && pwd )
+docker build --tag tokyor122 -f "${SRC_DIR}/rocker-tokyor122.Dockerfile" "${SRC_DIR}"
+
+RSTUDIO_PORT=${RSTUDIO_PORT:-8787}
+echo "http://localhost:$RSTUDIO_PORT" >&2
+docker run --rm -ti -p "${RSTUDIO_PORT}:8787" -e DISABLE_AUTH=true "$@" tokyor122 > /dev/null

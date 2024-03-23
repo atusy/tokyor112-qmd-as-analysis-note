@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/home/atusy/ghq/github.com/atusy/tokyor112-qmd-as-analysis-note/assets/examples/small-demo.qmd</title>
+<meta name="colorscheme" content="duskfox"></meta>
+<style>
+* {font-family: monospace}
+body {background-color: #232136; color: #e0def4}
+.Operator {color: #cdcbe0}
+.String {color: #a3be8c}
+.Keyword {color: #c4a7e7}
+.Comment {color: #817c9c}
+.Whitespace {color: #373354}
+.Function {color: #65b1cd}
+.-variable {color: #e0def4}
+.-punctuation-bracket {color: #cdcbe0}
+.-property {color: #569fba}
+.-markup-raw-block {color: #eb98c3}
+.Number {color: #ea9a97}
+.-spell {}
+.-tsnodemarker {}
+.-punctuation-special {color: #a6dae3}
+.-module {color: #a6dae3}
+.Conditional {color: #ccb1ed}
+.-punctuation-delimiter {color: #cdcbe0}
+</style>
+</head>
+<body style="display: flex">
+<pre>
+<span class="Keyword">---
+<span class="Comment"><span class="-spell"># YAMLフロントマター</span></span>
+<span class="Comment"><span class="-spell"># タイトルとかのメタデータを書くところ</span></span>
+<span class="String"><span class="-property">title</span></span><span class="-punctuation-delimiter">:</span> <span class="String">&quot;分析ノート&quot;</span>
+<span class="String"><span class="-property">author</span></span><span class="-punctuation-delimiter">:</span> <span class="String">&quot;Atusy&quot;</span>
+<span class="String"><span class="-property">date</span></span><span class="-punctuation-delimiter">:</span> <span class="String">&quot;2024-03-24&quot;</span>
+<span class="String"><span class="-property">format</span></span><span class="-punctuation-delimiter">:</span>
+  <span class="String"><span class="-property">html</span></span><span class="-punctuation-delimiter">:</span>
+    <span class="String"><span class="-property">embed-resources</span></span><span class="-punctuation-delimiter">:</span> <span class="Number">true</span>
+---
+</span>
+<span class="Comment"><span class="-spell">&lt;!-- 分析の目的とか方法についてMarkdown形式で書く --&gt;</span></span>
+<span class="-spell">車重と燃費の関係を調べたい</span>
+
+
+<span class="Comment"><span class="-spell">&lt;!-- チャンクに分析用のコードを書く --&gt;</span></span>
+<span class="-markup-raw-block"><span class="-markup-raw-block">```</span><span class="Conditional">{<span class="Conditional">r</span>}</span>
+<span class="-tsnodemarker"><span class="Comment"><span class="-spell">#| fig-cap: &quot;車重 (wt) と燃費 (mpg)&quot;</span></span>
+<span class="Comment"><span class="-spell">#| fig-width: 3</span></span>
+<span class="Comment"><span class="-spell">#| fig-height: 1.7</span></span>
+<span class="-variable"><span class="-module">ggplot2</span></span>::<span class="-variable"><span class="Function">ggplot</span></span><span class="-punctuation-bracket">(</span><span class="-variable">mtcars</span><span class="-punctuation-bracket">)</span> <span class="Operator">+</span><span class="Whitespace">▫</span>
+  <span class="-variable"><span class="-module">ggplot2</span></span>::<span class="-variable"><span class="Function">aes</span></span><span class="-punctuation-bracket">(</span><span class="-variable">wt</span><span class="-punctuation-delimiter">,</span> <span class="-variable">mpg</span><span class="-punctuation-bracket">)</span> <span class="Operator">+</span>
+  <span class="-variable"><span class="-module">ggplot2</span></span>::<span class="-variable"><span class="Function">geom_point</span></span><span class="-punctuation-bracket">(</span><span class="-punctuation-bracket">)</span>
+</span><span class="-markup-raw-block">```</span>
+</span>
+<span class="Comment"><span class="-spell">&lt;!-- 考察とかをMarkdown形式で書く --&gt;</span></span>
+<span class="-spell">車重と燃費は比例関係にある</span>
+
+
+
+
+</pre>
+</body>
+</html>

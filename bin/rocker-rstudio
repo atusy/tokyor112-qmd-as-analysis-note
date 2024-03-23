@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -eu
+
+RSTUDIO_PORT=${RSTUDIO_PORT:-8788}
+
+echo "http://localhost:$RSTUDIO_PORT" >&2
+
+docker run --rm -ti -p "${RSTUDIO_PORT}:8787" -e DISABLE_AUTH=true "$@" rocker/rstudio > /dev/null

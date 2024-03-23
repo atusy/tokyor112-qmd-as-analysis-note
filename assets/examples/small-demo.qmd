@@ -1,0 +1,30 @@
+---
+# YAMLフロントマター
+# タイトルとかのメタデータを書くところ
+title: "分析ノート"
+author: "Atusy"
+date: "2024-03-24"
+format:
+  html:
+    embed-resources: true
+---
+
+<!-- 分析の目的とか方法についてMarkdown形式で書く -->
+車重と燃費の関係を調べたい
+
+
+<!-- チャンクに分析用のコードを書く -->
+```{r}
+#| fig-cap: "車重 (wt) と燃費 (mpg)"
+#| fig-width: 3
+#| fig-height: 1.7
+ggplot2::ggplot(mtcars) + 
+  ggplot2::aes(wt, mpg) +
+  ggplot2::geom_point()
+```
+
+<!-- 考察とかをMarkdown形式で書く -->
+車重と燃費は比例関係にある
+
+
+
